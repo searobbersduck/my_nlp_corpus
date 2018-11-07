@@ -2,6 +2,7 @@
 
 import os
 from glob import glob
+import fire
 
 def generate_seg_script(filepattern, model, out_seg_dir, out_script_file):
     # spm_encode --model =./ xxx.model - -output_format = piece <./ file_0_0.txt >./ file_0_0_seg.txt
@@ -16,3 +17,6 @@ def generate_seg_script(filepattern, model, out_seg_dir, out_script_file):
         cmd_list.append(cmd)
     with open(script_file, 'w') as f:
         f.write('\n'.join(cmd_list))
+
+if __name__ == '__main__':
+    fire.Fire()
