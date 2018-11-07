@@ -19,4 +19,4 @@ def generate_seg_script(filepattern, model, out_seg_dir, out_script_file):
         f.write('\n'.join(cmd_list))
 
 if __name__ == '__main__':
-    fire.Fire()
+    fire.fire()
